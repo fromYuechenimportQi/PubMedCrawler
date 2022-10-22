@@ -11,7 +11,7 @@ $ ./main -kw "R2R3 myb domain" -ss small -trans -tid YOUR_BAIDU_TRANSLATE_APP_ID
 必填参数：-kw (注：如果该参数中有空格，则需要用双引号括起来)
 
 
-可选参数：-trans (无此参数则没有中文摘要翻译，点击此链接 http://api.fanyi.baidu.com/注册并认证， 使方可使用摘要翻译功能)
+可选参数：-trans (无此参数则没有中文摘要翻译，点击此链接 http://api.fanyi.baidu.com/注册并认证， 方可使用摘要翻译功能)
 
 
 默认参数：-ss small -out default.docx
