@@ -4,7 +4,9 @@
 
 Usage:
 ```
-$ go build ./main/main.go
+$ git clone https://github.com/yueyue970506/PubMedCrawler.git
+$ cd ./main/
+$ go build main.go
 $ ./main -kw "R2R3 myb domain" -ss small -trans -tid YOUR_BAIDU_TRANSLATE_APP_ID -tsk YOUR_BAIDU_TRANSLATE_SECRET_KEY -out YOURFILE
 ```
 
