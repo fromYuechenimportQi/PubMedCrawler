@@ -8,7 +8,7 @@ $ go build ./main/main.go
 $ ./main -kw "R2R3 myb domain" -ss small -trans -tid YOUR_BAIDU_TRANSLATE_APP_ID -tsk YOUR_BAIDU_TRANSLATE_SECRET_KEY -out YOURFILE
 ```
 
-必填参数：-kw
+必填参数：-kw (注：如果该参数中有空格，则需要用双引号括起来)
 
 
 可选参数：-trans (无此参数则没有中文摘要翻译)
