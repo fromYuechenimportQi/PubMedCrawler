@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"pubmedCrawler/src"
+	"sort"
 	"strings"
 	"time"
 )
@@ -67,7 +68,7 @@ func main() {
 	}
 
 	var paper src.PaperInfo
-	var papers []src.PaperInfo
+	var papers src.PaperInfos
 	urlChan := make(chan string, 100)
 	exitChan := make(chan bool, 4)
 	papersChan := make(chan src.PaperInfo, 100)
@@ -96,6 +97,7 @@ func main() {
 		}
 		papers = append(papers, v)
 	}
+	sort.Sort(&papers)
 	end := time.Since(start)
 	src.SaveAsWord(papers, *outPath)
 

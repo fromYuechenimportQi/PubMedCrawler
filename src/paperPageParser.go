@@ -18,6 +18,7 @@ type PaperInfo struct {
 	Content   string
 	Translate string
 }
+type PaperInfos []PaperInfo
 
 func (this *PaperInfo) PaperPageParse(urlChan chan string, papersChan chan PaperInfo, exitChan chan bool) {
 	c := colly.NewCollector()
@@ -63,4 +64,16 @@ func (this *PaperInfo) PaperPageParse(urlChan chan string, papersChan chan Paper
 	}
 
 	exitChan <- true
+}
+
+func (this *PaperInfos) Swap(i, j int) {
+	(*this)[i], (*this)[j] = (*this)[j], (*this)[i]
+}
+
+func (this *PaperInfos) Less(i, j int) bool {
+	return (*this)[i].Time > (*this)[j].Time
+}
+
+func (this *PaperInfos) Len() int {
+	return len(*this)
 }
